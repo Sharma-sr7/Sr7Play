@@ -4,8 +4,6 @@ import like from '../assets/like.png'
 import dislike from '../assets/dislike.png'
 import share from '../assets/share.png'
 import save from '../assets/save.png'
-import sharma from '../assets/sharma.jpg'
-import user_profile from '../assets/user_profile.jpg'
 import { API_KEY, value_converter } from '../data'
 import moment from 'moment'
 import { useParams } from 'react-router-dom'
@@ -39,8 +37,9 @@ const PlayVideo = () => {
         fetchOtherData();
     }, [apiData])
     return (
+        
         <div className='play-video'>
-            <iframe src={`https://www.youtube.com/embed/${videoId}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             <h3>{apiData ? apiData.snippet.title : ""}</h3>
             <div className="play-video-info">
                 <p>{apiData ? value_converter(apiData.statistics.viewCount) : ""} Views &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : ""}</p>

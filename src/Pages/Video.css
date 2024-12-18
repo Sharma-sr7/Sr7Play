@@ -1,4 +1,5 @@
 .play-container{
+    width: 100%;
     background-color: #f9f9f9;
     padding:20px 2%;
     display: flex;
@@ -8,7 +9,7 @@
 
 @media (max-width:900px) {
     .play-container{
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

@@ -56,3 +56,14 @@ nav{
         width: 100px;
     }
 }
+@media (max-width:480px) {
+    .nav-middle{
+        display: none;
+    }
+    .nav-left{
+        margin-left: 10px;
+    }
+    .nav-right .user-icon{
+        margin-right: 10px;
+    }
+}

@@ -1,10 +1,11 @@
 .recommended{
-    flex-basis: 30%;
+    width: 30%;
 }
 .side-video-list{
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
+    flex-wrap: wrap;
 }
 .side-video-list img{
     flex-basis: 49%;
@@ -20,7 +21,33 @@
 
 @media (max-width:900px) {
     .recommended{
-        flex-basis: 100%;
+        width: 100%;
+    }
+    .side-video-list img{
+        height: 100%;
+    }
+    .video-info{
+        padding-left: 1%;
+        padding-right: 1%;
     }
     
+}
+@media (max-width:480px) {
+    .side-video-list img{
+       flex-basis: 100%;
+    }
+    .video-info{
+        flex-basis: 100%;
+        margin-top: 10px;
+    }
+    .side-video-list .video-details{
+        display: flex;
+    }
+    .side-video-list p{
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+    .video-info h4{
+        font-size: 15px;
+    }
 }
