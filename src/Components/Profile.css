@@ -85,5 +85,8 @@
         box-shadow: none;
         border-radius: 0;  
     }
+    .account #more-icon{
+        display: none;
+    }
 
 }
