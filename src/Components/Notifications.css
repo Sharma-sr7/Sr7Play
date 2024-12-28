@@ -22,3 +22,11 @@
 .notifications.hide{
     display: none;
 }
+
+@media (max-width:480px) {
+    .notifications{
+        right: 0px;
+        top: 55px;
+    }
+    
+}

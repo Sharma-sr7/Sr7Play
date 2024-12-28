@@ -1,9 +1,10 @@
+
 .sign-container {
     max-width: 400px;
     margin: 50px auto;
     padding: 30px 20px;
     border-radius: 15px;
-    background: #ffffff;
+    background: white;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.8s ease-in-out;
   }
@@ -120,6 +121,7 @@
   @media (max-width: 500px) {
     .sign-container {
       padding: 20px 15px;
+      margin-top: 70px;
     }
   
     .sign-container h2 {
