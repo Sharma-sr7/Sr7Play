@@ -1,0 +1,129 @@
+.sign-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .sign-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    text-align: center;
+  }
+  .sign-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 1em;
+    color: #555555;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 500;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+    font-size: 1em;
+  }
+  
+  input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.4);
+    outline: none;
+    background: #ffffff;
+    transform: scale(1.02);
+  }
+  .sign-button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sign-button:hover {
+    background-color: red;
+    transform: scale(1.05);
+  }
+  
+  .sign-button:active {
+    transform: scale(0.98);
+  }
+  .sign-message {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #27ae60;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  .error {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+    animation: shake 0.3s ease-in-out;
+  }
+  .switch-text {
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #777777;
+    text-align: center;
+  }
+  .sign-container .switch-text span {
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+
+  @media (max-width: 500px) {
+    .sign-container {
+      padding: 20px 15px;
+    }
+  
+    .sign-container h2 {
+      font-size: 1.5em;
+    }
+  }
+  

@@ -17,7 +17,7 @@ import purchase_icon from '../assets/coin.png'
 
 const Profile = ({profile}) => {
   return (
-    <div className={`profile ${profile?"show":""}`}>
+    <div className={`profile ${profile?"hide":""}`}>
         <div className="user-details flex-div">
             <img src={profile_icon} alt="" />
             <div>

@@ -7,10 +7,12 @@ import upload_icon from '../assets/upload.png'
 import more_icon from '../assets/more.png'
 import notification_icon from '../assets/notification.png'
 import profile_icon from '../assets/sharma.jpg'
+import setting_icon from '../assets/setting.png'
+import login_icon from '../assets/user-interface.png'
 import { Link } from 'react-router-dom'
 
 
-const Navbar = ({setSideNavBar, setProfile}) => {
+const Navbar = ({setSideNavBar, setProfile , setNotifications}) => {
   return (
     <nav className='flex-div'>
         <div className="nav-left flex-div">
@@ -24,9 +26,9 @@ const Navbar = ({setSideNavBar, setProfile}) => {
             </div>
         </div>
         <div className="nav-right flex-div">
-            <img src={upload_icon} alt="" />
-            <img src={more_icon} alt="" />
-            <img src={notification_icon} alt="" />
+            <Link to={'/signup'}> <img src={login_icon} alt="" /> </Link>
+            <img id='setting' src={setting_icon} alt="" />
+            <img src={notification_icon} onClick={()=>setNotifications((pre)=>pre==true?false:true)} alt="" />
             <img className='user-icon' src={profile_icon} onClick={()=>setProfile((pre)=>pre === true?false:true)}  alt="" />
         </div>
     </nav>
