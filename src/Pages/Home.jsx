@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Home.css'
 import Sidebar from '../Components/Sidebar'
 import Main from '../Components/Main'
+import Profile from '../Components/Profile'
 
 const Home = ({sideNavBar}) => {
   const [category,setCategory] = useState(0);

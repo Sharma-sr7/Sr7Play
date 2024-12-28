@@ -1,0 +1,88 @@
+.profile {
+    position: fixed;
+    right: 95px;
+    top: 2%;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 10;
+    height: 95vh;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.profile hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.user-details {
+    align-items: start;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.user-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-details div {
+    margin-left: 10px;
+}
+
+.user-details h4 {
+    font-size: 20px;
+}
+
+.user-details p {
+    font-size: 13px;
+}
+
+.user-details a {
+    font-size: 14px;
+    color: blue;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.account {
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.account:hover {
+    background-color: rgb(245, 242, 242);
+    cursor: pointer;
+}
+
+.account img {
+    width: 20px;
+}
+
+.account p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    margin-left: 15px;
+
+}
+
+.account #more-icon {
+    margin-left: 125px;
+}
+
+.profile.show {
+    display: none;
+}
+
+@media (max-width:480px) {
+    .profile {
+        right: 0;
+        top: 55px;
+        box-shadow: none;
+        border-radius: 0;  
+    }
+
+}

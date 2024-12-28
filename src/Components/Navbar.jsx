@@ -10,7 +10,7 @@ import profile_icon from '../assets/sharma.jpg'
 import { Link } from 'react-router-dom'
 
 
-const Navbar = ({setSideNavBar}) => {
+const Navbar = ({setSideNavBar, setProfile}) => {
   return (
     <nav className='flex-div'>
         <div className="nav-left flex-div">
@@ -27,7 +27,7 @@ const Navbar = ({setSideNavBar}) => {
             <img src={upload_icon} alt="" />
             <img src={more_icon} alt="" />
             <img src={notification_icon} alt="" />
-            <img className='user-icon' src={profile_icon}  alt="" />
+            <img className='user-icon' src={profile_icon} onClick={()=>setProfile((pre)=>pre === true?false:true)}  alt="" />
         </div>
     </nav>
   )
