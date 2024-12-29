@@ -9,19 +9,30 @@ import Sign from './Components/Sign'
 import SignUp from './Components/SignUp'
 
 const App = () => {
-  const [sideNavBar,setSideNavBar] = useState(true);
-  const [profile,setProfile] = useState(true);
-  const [notification,setNotificatons] = useState(true)
+  const [sideNavBar, setSideNavBar] = useState(true);
+  const [profile, setProfile] = useState(true);
+  const [notification, setNotificatons] = useState(true);
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearchChange = (value) => {
+    setSearchValue(value);
+    
+  };
+  
   return (
     <div>
-      <Navbar setSideNavBar={setSideNavBar} setProfile={setProfile} setNotifications={setNotificatons}/>
-      <Profile profile={profile}/>
+      <Navbar setSideNavBar={setSideNavBar}
+        setProfile={setProfile}
+        setNotifications={setNotificatons}
+        onSearchChange={handleSearchChange}
+      />
+      <Profile profile={profile} />
       <Notifications notification={notification} />
       <Routes>
-        <Route path='/signup' element={<SignUp/>}/>
-        <Route path='/login' element={<Sign/>}/>
-        <Route path='/' element={<Home sideNavBar={sideNavBar}/>} />
-        <Route path='/video/:categoryId/:videoId' element={<Video/>} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/login' element={<Sign />} />
+        <Route path='/' element={<Home sideNavBar={sideNavBar} searchValue={searchValue} />} />
+        <Route path='/video/:categoryId/:videoId' element={<Video />} />
       </Routes>
     </div>
   )

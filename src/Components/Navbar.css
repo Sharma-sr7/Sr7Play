@@ -55,11 +55,36 @@ nav {
 }
 
 .nav-right a {
-    padding-top: 3px;
+    padding-top: 3%;
     display: inline-block;
 }
 
-
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+  .mobile-search{
+    display: none;
+  }
+  
+  
+  
 @media (max-width:900px) {
     .menu-icon {
         display: none;
@@ -71,7 +96,6 @@ nav {
 
     .nav-right .user-icon {
         display: block;
-        width: 30px;
     }
 
     .logo {
@@ -105,5 +129,11 @@ nav {
     
     .nav-right #notif {
         margin-left: 25px;
+    }
+    .mobile-search{
+        display: block;
+        position: sticky;
+        top: 54px;
+
     }
 }
